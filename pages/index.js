@@ -1,6 +1,4 @@
 import React, { useContext, useEffect } from 'react'
-import { observer } from "mobx-react-lite"
-import countdownStore from "./store/countdownStore"
 import Countdown from "./components/countdown"
 import dynamic from "next/dynamic"
 
@@ -14,8 +12,7 @@ const YoutubeBackground = dynamic(() => import("react-youtube-background"), {
   ssr: false
 });
 
-const Index = observer(() => {
-    const store = useContext(countdownStore);
+const Index = () => {
 
     return (
         <YoutubeBackground
@@ -121,6 +118,6 @@ const Index = observer(() => {
             `}</style>
         </YoutubeBackground>
     )
-});
+};
 
 export default Index;

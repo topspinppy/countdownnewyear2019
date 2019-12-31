@@ -1,7 +1,5 @@
 import { useGlobal } from 'reactn'
-import { useEffect } from 'react'
 export default function hnyText() {
-  const [ timeouts, settimeouts ] = useGlobal("timeouts");
 
   return (
     <div style={{

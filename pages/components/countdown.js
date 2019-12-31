@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
-import { observer } from "mobx-react-lite"
 import Countdown from "react-countdown"
 import styled from 'styled-components'
 import HnyText from './hnyText'
-import countdownStore from '../store/countdownStore'
 
 const Digit = styled.div`
     color: #ecf0f1;
@@ -23,13 +21,11 @@ const Block = styled.div`
 `
 
 
-const countdown = observer(() => {
-    const store = useContext(countdownStore)
+const countdown = () => {
     const Completionist = () => <HnyText />
 
     const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
-        store.changeCountdown(true)
         return (
             <Completionist />
         )
@@ -50,7 +46,7 @@ const countdown = observer(() => {
     }
     }
     return <Countdown date={new Date("Jan 1, 2020 00:00:00").getTime()} renderer={renderer} />
-})
+}
 
 
 export default countdown
