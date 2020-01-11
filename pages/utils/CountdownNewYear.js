@@ -40,8 +40,8 @@ export default function CountdownTimer(props) {
     });
     return (
         <>
-            {props.renderer(timerComponents.length,timerComponents)}
-            {/* {timerComponents.length ? timerComponents : <span>Time's up!</span>} */}
+            {/* {props.renderer(timerComponents.length,timerComponents)} */}
+            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
         </>
     );
 }
