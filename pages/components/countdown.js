@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import Countdown from "react-countdown"
 import styled from 'styled-components'
 import HnyText from './hnyText'
 import px2vw from '../utils/px2vw'
@@ -27,24 +26,21 @@ const Block = styled.div`
 `
 
 
-const countdown = () => {
-    const renderer = (length, timer) => {
+const Countdown = () => {
+    let renderers = (length, timer) => {
         if(length) {
             return timer 
         } else {
-            return (
-                <div>
-                    timsup
-                </div>
-            )
+            return <HnyText />
         }
     }
     return (
         <Digit>
-            <CountdownNewYear renderer={renderer} />
+            {/* <CountdownNewYear renderer={renderers} /> */}
+            { <CountdownNewYear />}
         </Digit>
     )
 }
 
 
-export default countdown
+export default Countdown

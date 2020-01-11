@@ -26,7 +26,7 @@ const Index = () => {
             >
                 <div className="contain">
                     <div className="header tracking-in-expand">
-                        <h2><span>Countdown to New Year</span>2020</h2>
+                        <h2><span>Countdown to New Year</span>2021</h2>
                     </div>
                     <div className="content">
                         <Countdown />

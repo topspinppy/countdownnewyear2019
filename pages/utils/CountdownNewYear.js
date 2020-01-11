@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function CountdownTimer({ renderer }) {
+export default function CountdownTimer(props) {
     const calculateTimeLeft = () => {
         const difference = +new Date("2021-01-01") - +new Date();
         let timeLeft = {};
@@ -40,7 +40,7 @@ export default function CountdownTimer({ renderer }) {
     });
     return (
         <>
-            {renderer(timerComponents.length,timerComponents)}
+            {props.renderer(timerComponents.length,timerComponents)}
             {/* {timerComponents.length ? timerComponents : <span>Time's up!</span>} */}
         </>
     );
