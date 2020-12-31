@@ -18,7 +18,7 @@ const Index = () => {
         <>
             <Global />
             <YoutubeBackground
-                videoId={`-ZoRz7bkd_Q`}
+                videoId={`DzakIXCVs60`}
                 aspectRatio="16:9"
                 overlay="rgba(0,0,0,0.8)"
                 onplay="true"
@@ -30,9 +30,6 @@ const Index = () => {
                     </div>
                     <div className="content">
                         <Countdown />
-                    </div>
-                    <div className="footer">
-                        Made With Next.js  | By Topz
                     </div>
                 </div>
                 <style jsx global>{`

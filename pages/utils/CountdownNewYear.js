@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
+import styled from 'styled-components'
 
+const TextStyled = styled.div`
+    font-size: 64px;
+`
 export default function CountdownTimer(props) {
     const calculateTimeLeft = () => {
         const difference = +new Date("2021-01-01") - +new Date();
@@ -40,8 +44,7 @@ export default function CountdownTimer(props) {
     });
     return (
         <>
-            {/* {props.renderer(timerComponents.length,timerComponents)} */}
-            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+            {timerComponents.length ? timerComponents : <TextStyled>🎆 🎆 Happy New Year 2021 🎆 🎆</TextStyled>}
         </>
     );
 }
